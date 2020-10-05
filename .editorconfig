@@ -1,0 +1,24 @@
+# top-most EditorConfig file
+root = true
+
+# space indentation
+[*]
+# cleanup trailing spaces on save
+trim_trailing_whitespace = true
+# Unix-style newlines with a newline ending every file
+end_of_line = lf
+insert_final_newline = true
+# spaces for all
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+# yaml files need spaces
+[*.yml]
+indent_size = 2
+indent_style = space
+
+# makefiles need tabs
+[Makefile]
+indent_size = 2
+indent_style = tab

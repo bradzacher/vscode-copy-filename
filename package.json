@@ -1,0 +1,137 @@
+{
+  "name": "vscode-copy-filename",
+  "displayName": "Copy filename",
+  "description": "Simple VS Code plugin that allows you to copy file name or folder name to clipboard from sidebar or opened file label",
+  "version": "0.1.0",
+  "license": "MIT",
+  "publisher": "bradzacher",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bradzacher/vscode-copy-filename.git"
+  },
+  "author": {
+    "email": "brad.zacher@gmail.com",
+    "name": "Brad Zacher",
+    "url": "https://github.com/bradzacher"
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run clean && yarn run build",
+    "build": "tsc -b tsconfig.build.json",
+    "clean": "tsc -b tsconfig.build.json --clean",
+    "format": "prettier --write \"./**/*.{ts,js,json,md}\" --ignore-path ./.prettierignore",
+    "lint": "eslint . --ext .js,.ts --ignore-path ./.eslintignore",
+    "vscode:publish": "yarn vsce publish",
+    "pretest": "yarn run build",
+    "test": "node ./out/test/runTest.js",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "watch": "tsc -b tsconfig.build.json --watch"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.2",
+    "@types/vscode": "^1.30.0",
+    "eslint-config-brad": "^4.0.0",
+    "glob": "^7.1.5",
+    "jest": "^26.4.2",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3",
+    "vsce": "^1.69.0",
+    "vscode-test": "^1.2.2"
+  },
+  "//": "vscode extension settings",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "keywords": [
+    "sidebar",
+    "copy-filename",
+    "clipboard",
+    "file",
+    "folder"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.copyFileName",
+    "onCommand:extension.copyFileNameOfActiveFile",
+    "onCommand:extension.copyFileNameNoExtension",
+    "onCommand:extension.copyFileNameNoExtensionOfActiveFile"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "category": "File",
+        "command": "extension.copyFileName",
+        "title": "Copy Filename"
+      },
+      {
+        "category": "File",
+        "command": "extension.copyFileNameOfActiveFile",
+        "title": "Copy Filename of Active File"
+      },
+      {
+        "category": "File",
+        "command": "extension.copyFileNameNoExtension",
+        "title": "Copy Filename Without Extension"
+      },
+      {
+        "category": "File",
+        "command": "extension.copyFileNameNoExtensionOfActiveFile",
+        "title": "Copy Filename Without Extension of Active File"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "COMMENT": "This command should only be shown in context menus",
+          "command": "extension.copyFileName",
+          "when": "false"
+        },
+        {
+          "COMMENT": "This command should only be shown in context menus",
+          "command": "extension.copyFileNameNoExtension",
+          "when": "false"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "extension.copyFileName",
+          "when": "isFileSystemResource",
+          "COMMENT": "https://github.com/microsoft/vscode/blob/f74e473238aca7b79c08be761d99a0232838ca4c/src/vs/workbench/contrib/files/browser/fileActions.contribution.ts#L496",
+          "group": "6_copypath@102"
+        },
+        {
+          "command": "extension.copyFileNameNoExtension",
+          "when": "isFileSystemResource",
+          "COMMENT": "https://github.com/microsoft/vscode/blob/f74e473238aca7b79c08be761d99a0232838ca4c/src/vs/workbench/contrib/files/browser/fileActions.contribution.ts#L496",
+          "group": "6_copypath@103"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "extension.copyFileName",
+          "when": "isFileSystemResource",
+          "COMMENT": "https://github.com/microsoft/vscode/blob/f74e473238aca7b79c08be761d99a0232838ca4c/src/vs/workbench/contrib/files/browser/fileActions.contribution.ts#L169",
+          "group": "1_cutcopypaste@102"
+        },
+        {
+          "command": "extension.copyFileNameNoExtension",
+          "when": "isFileSystemResource",
+          "COMMENT": "https://github.com/microsoft/vscode/blob/f74e473238aca7b79c08be761d99a0232838ca4c/src/vs/workbench/contrib/files/browser/fileActions.contribution.ts#L169",
+          "group": "1_cutcopypaste@103"
+        }
+      ]
+    }
+  },
+  "main": "./dist/extension.js",
+  "galleryBanner": {
+    "color": "#1c2237",
+    "theme": "dark"
+  }
+}

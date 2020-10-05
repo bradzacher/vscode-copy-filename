@@ -1,2 +1,19 @@
 # vscode-copy-filename
-Simple VS Code plugin that allows you to copy file name or folder name to clipboard from sidebar or opened file label.
+
+[![version](https://vsmarketplacebadge.apphb.com/version-short/bradzacher.copy-filename.svg)](https://marketplace.visualstudio.com/items?itemName=bradzacher.copy-filename)
+[![installs](https://vsmarketplacebadge.apphb.com/installs-short/bradzacher.copy-filename.svg)](https://marketplace.visualstudio.com/items?itemName=bradzacher.copy-filename)
+[![rating](https://vsmarketplacebadge.apphb.com/rating-short/bradzacher.copy-filename.svg)](https://marketplace.visualstudio.com/items?itemName=bradzacher.copy-filename)
+
+This extension adds the following:
+
+1. File Explorer right click menu items which allow you to copy one (or more) filenames with (or without) the extension:
+
+   ![copy from explorer](https://raw.githubusercontent.com/bradzacher/vscode-copy-filename/main/copy-from-explorer.gif)
+
+1. Editor title right click menu items which allow you to copy the filename with (or without) the extension:
+
+   ![copy from tab](https://raw.githubusercontent.com/bradzacher/vscode-copy-filename/main/copy-from-tab.gif)
+
+1. Command pallette commands so you can access single-file commands quickly, or assign keyboard shortcuts to them:
+
+   ![copy command](https://raw.githubusercontent.com/bradzacher/vscode-copy-filename/main/copy-command.gif)
