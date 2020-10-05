@@ -2,7 +2,7 @@
   "name": "vscode-copy-filename",
   "displayName": "Copy filename",
   "description": "Simple VS Code plugin that allows you to copy file name or folder name to clipboard from sidebar or opened file label",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "publisher": "bradzacher",
   "repository": {
