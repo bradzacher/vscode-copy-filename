@@ -1,8 +1,8 @@
 # vscode-copy-filename
 
-[![version](https://vsmarketplacebadge.apphb.com/version-short/bradzacher.vscode-copy-filename.svg)](https://marketplace.visualstudio.com/items?itemName=bradzacher.vscode-copy-filename)
-[![installs](https://vsmarketplacebadge.apphb.com/installs-short/bradzacher.vscode-copy-filename.svg)](https://marketplace.visualstudio.com/items?itemName=bradzacher.vscode-copy-filename)
-[![rating](https://vsmarketplacebadge.apphb.com/rating-short/bradzacher.vscode-copy-filename.svg)](https://marketplace.visualstudio.com/items?itemName=bradzacher.vscode-copy-filename)
+[![version](https://vsmarketplacebadges.dev/version/bradzacher.vscode-copy-filename.svg)](https://marketplace.visualstudio.com/items?itemName=bradzacher.vscode-copy-filename)
+[![installs](https://vsmarketplacebadges.dev/installs/bradzacher.vscode-copy-filename.svg)](https://marketplace.visualstudio.com/items?itemName=bradzacher.vscode-copy-filename)
+[![rating](https://vsmarketplacebadges.dev/rating/bradzacher.vscode-copy-filename.svg)](https://marketplace.visualstudio.com/items?itemName=bradzacher.vscode-copy-filename)
 
 This extension adds the following:
 
